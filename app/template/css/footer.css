@@ -1,0 +1,37 @@
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	padding: 6px 12px;
+
+	background: rgba(20, 20, 20, 0.9);
+	backdrop-filter: blur(6px);
+
+	border-top: 1px solid #333;
+
+	font-size: 12px;
+	color: #aaa;
+
+	z-index: 1000;
+}
+
+#footer a {
+	color: #4ea1ff;
+	text-decoration: none;
+	transition: 0.15s ease;
+}
+
+#footer a:hover {
+	color: #ffffff;
+}
+
+#footer .sep {
+	color: #555;
+}

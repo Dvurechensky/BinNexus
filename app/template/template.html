@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="__LANG__">
+	<head>
+		<meta charset="utf-8" />
+		<title>Freelancer Dependency Graph</title>
+		<link rel="stylesheet" href="css/template.css" />
+		<link rel="stylesheet" href="css/search_overlay.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+		<script src="libs/cytoscape.min.js" defer></script>
+
+		<script src="js/search.js" defer></script>
+		<script src="js/config.js" defer></script>
+		<script src="js/i18n.js" defer></script>
+		<script src="js/ui.js" defer></script>
+		<script src="js/data.js" defer></script>
+		<script src="js/graph.js" defer></script>
+		<script src="js/main.js" defer></script>
+	</head>
+	<body>
+		<div id="searchBackdrop" class="search-backdrop hidden"></div>
+
+		<div id="globalSearch" class="search-overlay hidden">
+			<div class="search-header">
+				<input
+					id="globalSearchInput"
+					data-i18n-placeholder="search_global"
+					placeholder="search functions..."
+				/>
+				<button id="searchClose" data-i18n-title="close">✖</button>
+			</div>
+
+			<div id="globalSearchResults"></div>
+		</div>
+
+		<div id="app">
+			<div id="left">
+				<div id="toolbar">
+					<select id="langSwitch" data-i18n-title="language">
+						<option value="en">🇺🇸 EN</option>
+						<option value="ru">🇷🇺 RU</option>
+					</select>
+					<input
+						id="search"
+						data-i18n-placeholder="search_placeholder"
+						placeholder="search dll..."
+					/>
+					<button id="resetView" data-i18n="reset">reset</button>
+
+					<label>
+						<input type="checkbox" id="apiOnly" />
+						<span data-i18n="api_only">api only</span>
+					</label>
+
+					<label>
+						<input type="checkbox" id="showLabels" checked />
+						<span data-i18n="labels">labels</span>
+					</label>
+				</div>
+				<button id="openGlobalSearch" class="floating-search-btn">🔍</button>
+				<div id="cy"></div>
+			</div>
+
+			<div id="side">
+				<div id="sideHeader" data-i18n="node_info">Node info</div>
+				<div id="sideBody" data-i18n="click_node">Нажми на ноду.</div>
+			</div>
+			<div id="footer">
+				<span data-i18n="footer_created_by"></span>
+				<a href="https://dvurechensky.pro" target="_blank">Dvurechensky</a>
+
+				<span class="sep">|</span>
+
+				<a
+					href="https://github.com/Dvurechensky/BinNexus"
+					target="_blank"
+					data-i18n="footer_github"
+				></a>
+			</div>
+		</div>
+	</body>
+</html>
