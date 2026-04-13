@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 13 апреля 2026 03:35:07
-# Version: 1.0.1
+# Last Updated: 13 апреля 2026 12:56:43
+# Version: 1.0.3
 # ========================================
 import shutil
 import subprocess
