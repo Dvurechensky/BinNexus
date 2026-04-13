@@ -15,6 +15,10 @@
   <img src="https://shields.dvurechensky.pro/badge/toolchain-pefile%20%2B%20dumpbin-orange" />
 </p>
 
+<p>
+  <a href="https://youtu.be/ZZGMkcnkHlk?si=hh5CeFk8aYkVdbvS" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/youtube.svg" width="32" height="32" /></a>
+</p>
+
 </div>
 
 ---
