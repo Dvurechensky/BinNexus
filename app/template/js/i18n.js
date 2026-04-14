@@ -57,6 +57,9 @@ const i18n = {
 
 		footer_created_by: 'Created by',
 		footer_github: 'BinNexus on GitHub',
+
+		runtime: 'runtime',
+		static: 'static',
 	},
 	ru: {
 		title: 'Граф зависимостей Freelancer',
@@ -116,6 +119,9 @@ const i18n = {
 
 		footer_created_by: 'Создано',
 		footer_github: 'BinNexus на GitHub',
+
+		runtime: 'рантайм',
+		static: 'статик',
 	},
 }
 

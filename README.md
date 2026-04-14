@@ -58,9 +58,11 @@ https://dvurechensky.github.io/Freelancer.Reverse.Runtime/
   - [Global Search](#global-search)
   - [Noise Filtering](#noise-filtering)
 - [How it works](#how-it-works)
+- [Architecture](#architecture)
 - [Quick Start](#quick-start)
 - [Requirements](#requirements)
 - [Limitations](#limitations)
+  - [Runtime Analysis (experimental)](#runtime-analysis-experimental)
 - [Purpose](#purpose)
 - [Notes](#notes)
 
@@ -102,12 +104,36 @@ https://dvurechensky.github.io/Freelancer.Reverse.Runtime/
 
 ## How it works
 
-1. Scans a directory with DLL / EXE files
-2. Extracts:
-   - imports (via dumpbin)
-   - exports (via pefile)
-3. Builds a dependency graph
-4. Generates an HTML portal
+1. Scan the directory containing the DLL/EXE
+2. Extract:
+   - Imports (via dumpbin)
+   - Exports (via pefile)
+3. Generate a static dependency graph
+4. (Optional) Perform runtime analysis
+5. Generate an HTML portal
+
+---
+
+## Architecture
+
+Starting with the current version, BinNexus is no longer a monolithic script.
+
+The tool is built as a modular system consisting of individual components:
+
+- `analysis.static` — static analysis (imports / exports)
+- `analysis.runtime` — dynamic dependency analysis
+- `graph` — graph construction and aggregation
+- `portal` — HTML interface generation
+- `cli` — argument processing and pipeline management
+
+This allows:
+
+- easy functionality expansion
+- adding new analyzers
+- control over each processing stage
+
+> [!NOTE]
+> The architecture is designed with future expansion in mind (plugins, new analysis engines).
 
 ---
 
@@ -127,9 +153,37 @@ See 👉 [Build & Run (Windows)](docs/BUILD.md)
 
 ## Limitations
 
-- static analysis only
-- no call graph
-- no function logic analysis
+- Static analysis depends on dumpbin (x86 Native Tools)
+- Runtime analysis is experimental
+- Limited architecture support (main focus is x86)
+- No call graph
+- No function logic analysis
+
+---
+
+### Runtime Analysis (experimental)
+
+BinNexus supports runtime dependency analysis.
+
+This allows you to identify:
+
+- dynamically loaded DLLs
+- real dependencies missing from static dependencies
+- application behavior at startup
+
+Features:
+
+- binary launch via an auxiliary runtime loader
+- collecting a list of loaded modules
+- integrating results into a common graph
+
+> [!IMPORTANT]
+> Runtime analysis complements static analysis and does not replace it.
+
+> [!WARNING]
+> This mode is currently x86-specific and requires testing on other architectures.
+
+[Example](docs/BUILD.md)
 
 ---
 
@@ -138,6 +192,10 @@ See 👉 [Build & Run (Windows)](docs/BUILD.md)
 BinNexus solves the problem of:
 
 > quickly understanding the structure of a binary application before disassembly
+
+And complements it by:
+
+> identifying the actual application dependencies both at the file level and at runtime
 
 ---
 

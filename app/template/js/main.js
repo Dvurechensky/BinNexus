@@ -167,4 +167,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	applySearch()
 	applyApiFilter()
 	applyLabelMode()
+	applyEdgeFilter()
 })

@@ -18,23 +18,34 @@ const cy = cytoscape({
 	container: document.getElementById('cy'),
 
 	elements: [
-		...data.nodes.map(n => ({
-			data: {
-				id: n.id,
-				degree: n.degree ?? 0,
-				export_count: n.export_count ?? 0,
-				export_raw_count: n.export_raw_count ?? 0,
-				has_api: !!n.has_api,
-				color: n.color || AppConfig.defaultNodeColor,
-				label: n.label || `${n.id}\n${n.export_count ?? 0} exp`,
-			},
-		})),
-		...data.edges.map(e => ({
-			data: {
-				source: e.source,
-				target: e.target,
-			},
-		})),
+		...data.nodes
+			.filter(n => !n.id.toLowerCase().includes('dll_loader'))
+			.map(n => ({
+				data: {
+					id: n.id,
+					degree: n.degree ?? 0,
+					export_count: n.export_count ?? 0,
+					export_raw_count: n.export_raw_count ?? 0,
+					has_api: !!n.has_api,
+					color: n.color || AppConfig.defaultNodeColor,
+					label: n.label || `${n.id}\n${n.export_count ?? 0} exp`,
+				},
+			})),
+		...data.edges
+			.filter(
+				e =>
+					!e.source.toLowerCase().includes('dll_loader') &&
+					!e.target.toLowerCase().includes('dll_loader'),
+			)
+			.map(e => ({
+				data: {
+					source: e.source,
+					target: e.target,
+					types: e.types,
+					is_static: e.is_static,
+					is_runtime: e.is_runtime,
+				},
+			})),
 	],
 
 	style: [
@@ -65,6 +76,22 @@ const cy = cytoscape({
 				'curve-style': 'bezier',
 				'arrow-scale': 0.7,
 				opacity: 0.65,
+			},
+		},
+		{
+			selector: 'edge[is_static]',
+			style: {
+				'line-color': '#4da6ff',
+				'target-arrow-color': '#4da6ff',
+				width: 1.5,
+			},
+		},
+		{
+			selector: 'edge[is_runtime][!is_static]',
+			style: {
+				'line-color': '#ff9f43',
+				'target-arrow-color': '#ff9f43',
+				width: 2,
 			},
 		},
 		{

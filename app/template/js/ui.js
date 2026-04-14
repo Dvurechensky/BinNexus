@@ -69,6 +69,35 @@ async function copyTextToClipboard(text, label = 'copied') {
 	}
 }
 
+function applyEdgeFilter() {
+	const showStatic = document.getElementById('toggleStatic').checked
+	const showRuntime = document.getElementById('toggleRuntime').checked
+
+	// 1. edges
+	cy.edges().forEach(e => {
+		const isStatic = e.data('is_static')
+		const isRuntime = e.data('is_runtime')
+
+		let visible = false
+
+		if (isStatic && showStatic) visible = true
+		if (isRuntime && showRuntime) visible = true
+
+		e.toggleClass('hidden-by-filter', !visible)
+	})
+
+	// 2. nodes (🔥 ВОТ ЭТОГО У ТЕБЯ НЕТ)
+	cy.nodes().forEach(n => {
+		const visibleEdges = n
+			.connectedEdges()
+			.filter(e => !e.hasClass('hidden-by-filter'))
+
+		const hasVisible = visibleEdges.length > 0
+
+		n.toggleClass('hidden-by-filter', !hasVisible)
+	})
+}
+
 document.addEventListener('click', async e => {
 	const el = e.target.closest('.copyable')
 	if (!el) return
@@ -116,3 +145,6 @@ document.addEventListener('mousedown', e => {
 		closeSearch()
 	}
 })
+
+document.getElementById('toggleStatic').onchange = applyEdgeFilter
+document.getElementById('toggleRuntime').onchange = applyEdgeFilter
