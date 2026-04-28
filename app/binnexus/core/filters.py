@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 27 апреля 2026 09:39:21
-# Version: 1.0.20
+# Last Updated: 28 апреля 2026 14:23:45
+# Version: 1.0.21
 # ========================================
 # app\binnexus\core\filters.py 
 
