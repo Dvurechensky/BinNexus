@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 04 мая 2026 06:50:20
-# Version: 1.0.27
+# Last Updated: 05 мая 2026 06:59:16
+# Version: 1.0.28
 # ========================================
 # app\binnexus\infra\fs.py
 
