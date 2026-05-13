@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 12 мая 2026 12:03:27
-# Version: 1.0.35
+# Last Updated: 13 мая 2026 06:50:20
+# Version: 1.0.36
 # ========================================
 # app\binnexus\analysis\runtime\collector.py
 
