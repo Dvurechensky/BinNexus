@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 01 июня 2026 14:45:03
-# Version: 1.0.55
+# Last Updated: 02 июня 2026 06:50:21
+# Version: 1.0.56
 # ========================================
 # app\binnexus\portal\builder.py
 
