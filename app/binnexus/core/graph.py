@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 08 июня 2026 06:50:20
-# Version: 1.0.62
+# Last Updated: 09 июня 2026 16:51:19
+# Version: 1.0.63
 # ========================================
 # app\binnexus\core\graph.py
 
