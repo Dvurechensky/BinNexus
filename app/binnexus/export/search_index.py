@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 24 июня 2026 10:32:26
-# Version: 1.0.78
+# Last Updated: 25 июня 2026 16:28:30
+# Version: 1.0.79
 # ========================================
 # app\binnexus\export\search_index.py
 
