@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 04 июля 2026 08:45:44
-# Version: 1.0.89
+# Last Updated: 05 июля 2026 10:54:43
+# Version: 1.0.90
 # ========================================
 # app\binnexus\analysis\static\exports.py
 
