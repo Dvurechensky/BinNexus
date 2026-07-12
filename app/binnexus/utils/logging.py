@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 11 июля 2026 13:58:39
-# Version: 1.0.96
+# Last Updated: 12 июля 2026 06:50:21
+# Version: 1.0.97
 # ========================================
 # app\binnexus\utils\logging.py
 
