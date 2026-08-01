@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 31 июля 2026 16:24:41
-# Version: 1.0.116
+# Last Updated: 01 августа 2026 06:50:21
+# Version: 1.0.117
 # ========================================
 # app\binnexus\core\models.py
 
