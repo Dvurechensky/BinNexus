@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 10 сентября 2026 10:05:00
-# Version: 1.0.157
+# Last Updated: 11 сентября 2026 06:50:20
+# Version: 1.0.158
 # ========================================
 # app\binnexus\core\config.py
 
