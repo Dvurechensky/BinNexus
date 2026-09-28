@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 27 сентября 2026 11:54:38
-# Version: 1.0.174
+# Last Updated: 28 сентября 2026 12:06:26
+# Version: 1.0.175
 # ========================================
 # app\binnexus\core\scanner.py
 
