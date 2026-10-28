@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 27 октября 2026 06:50:20
-# Version: 1.0.203
+# Last Updated: 28 октября 2026 10:16:50
+# Version: 1.0.204
 # ========================================
 # app\binnexus\cli\args.py
 
