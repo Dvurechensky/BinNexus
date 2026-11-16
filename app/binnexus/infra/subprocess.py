@@ -2,8 +2,8 @@
 # Author: Nikolay Dvurechensky
 # Site: https://dvurechensky.pro/
 # Gmail: dvurechenskysoft@gmail.com
-# Last Updated: 15 ноября 2026 11:23:44
-# Version: 1.0.222
+# Last Updated: 16 ноября 2026 08:32:04
+# Version: 1.0.223
 # ========================================
 # app\binnexus\infra\subprocess.py
 
